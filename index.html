@@ -10,6 +10,21 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'hsl(185, 41%, 84%)',
+            btn: 'hsl(183, 100%, 15%)',
+            label: 'hsl(186, 14%, 43%)',
+            input: 'hsl(189, 41%, 97%)',
+          }
+        }
+      }
+    }
+  </script>
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body {
@@ -22,24 +37,32 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body style="background-color: hsl(185, 41%, 84%);">
-  <h2 style="color: hsl(186, 14%, 43%);" class="text-center font-bold mt-10 mb-1 text-xl tracking-5">SPLI</h2>
-  <h2 style="color: hsl(186, 14%, 43%);" class="text-center font-bold mb-10 text-xl">TTER</h2>
+<body class="bg-primary">
+  <!-- <h2 style="color: hsl(186, 14%, 43%);" class="text-center font-bold mt-10 mb-1 text-xl tracking-5">SPLI</h2>
+  <h2 style="color: hsl(186, 14%, 43%);" class="text-center text-clifford font-bold mb-10 text-xl">TTER</h2> -->
+
+  <!-- Can be done like this -->
+  <h2 class="text-center font-bold my-10 tracking-5 text-label text-xl uppercase">spli<br />tter</h2>
   
-  <form class="bg-white rounded-t-3xl py-10">
-    <label class="my-7 px-10" style="color: hsl(186, 14%, 43%)">Bill</label>
-    <div class="flex flex-row">
-      <input type="text" placeholder="0" style="background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%); ::placeholder{color: hsl(186, 14%, 43%);}" class="text-right w-4/5 m-auto py-3 px-3 text-xl rounded-md mb-8 mt-2"/>
-    </div>
+  <div class="bg-white rounded-t-3xl py-10">
+      <div class="w-4/5 mx-auto">
+        <label class="text-label">Bill</label>
+        <div class="mt-1 mb-5 relative">
+          <img src="./images/icon-dollar.svg" alt="icon" class="absolute top-3.5 left-3" />
+          <input type="text" placeholder="0" class="bg-input placeholder-label text-btn text-xl w-full text-right py-2 pl-8 pr-3 rounded-lg" />
+        </div>
+      </div>
+    
 
     <label style="color: hsl(186, 14%, 43%)" class="px-10">Select Tip %</label>
     <div class="grid grid-cols-2 grid-rows-3 gap-5 justify-items-stretch mt-3 mx-10 mb-9">
-      <button style="background-color: hsl(183, 100%, 15%); color: hsl(189, 41%, 97%);" class="text-2xl py-2 rounded-md">5%</button>
-      <button style="background-color: hsl(183, 100%, 15%); color: hsl(189, 41%, 97%);" class="text-2xl py-2 rounded-md">10%</button>
-      <button style="background-color: hsl(183, 100%, 15%); color: hsl(189, 41%, 97%);" class="text-2xl py-2 rounded-md">15%</button>
-      <button style="background-color: hsl(183, 100%, 15%); color: hsl(189, 41%, 97%);" class="text-2xl py-2 rounded-md">25%</button>
-      <button style="background-color: hsl(183, 100%, 15%); color: hsl(189, 41%, 97%);" class="text-2xl py-2 rounded-md">50%</button>
-      <input type="text" placeholder="Custom" style="background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%); ::placeholder{color: hsl(185, 41%, 84%);}" class="text-right text-2xl px-3 rounded-md"/>
+      <button class="text-xl py-2 rounded-md bg-btn text-white">5%</button>
+      <button class="text-xl py-2 rounded-md bg-btn text-white">10%</button>
+      <button class="text-xl py-2 rounded-md bg-btn text-white">15%</button>
+      <button class="text-xl py-2 rounded-md bg-btn text-white">25%</button>
+      <button class="text-xl py-2 rounded-md bg-btn text-white">50%</button>
+      <!-- placeholder-[extension color from tailwind config for placeholder color] -->
+      <input type="text" placeholder="Custom" class="text-right text-xl px-3 rounded-md text-btn bg-input placeholder-label"/>
     </div>
 
     <label style="color: hsl(186, 14%, 43%)" class="px-10">Number of People</label>
@@ -64,7 +87,7 @@
 
       <button>Reset</button>
     </div>
-  </form>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
