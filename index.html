@@ -43,35 +43,35 @@
   <h2 style="color: hsl(186, 14%, 43%);" class="text-center text-clifford font-bold mb-10 text-xl">TTER</h2> -->
 
   <!-- Can be done like this -->
-  <img src="images/logo.svg" alt="logo" class="mx-auto my-8"/>
+  <img src="images/logo.svg" alt="logo" class="mx-auto my-20"/>
   <!-- <h2 class="text-center font-bold my-10 tracking-5 text-label text-xl uppercase">spli<br />tter</h2> -->
   
-  <div class="bg-white rounded-t-3xl py-10">
+  <div class="bg-white rounded-t-3xl pt-10 pb-5">
     <div class="w-4/5 mx-auto">
       <label class="text-label">Bill</label>
       <div class="mt-1 mb-5 relative">
         <img src="./images/icon-dollar.svg" alt="icon" class="absolute top-3.5 left-3" />
-        <input type="text" placeholder="0" class="bg-input placeholder-label text-btn text-xl w-full text-right py-2 pl-8 pr-3 rounded-lg outline-0 focus:border-2 focus:border-tip" />
+        <input type="text" placeholder="0" class="bg-input border-2 border-transparent placeholder-label text-btn text-xl w-full text-right py-2 pl-8 pr-3 rounded-lg outline-0 focus:border-2 focus:border-tip amount" />
       </div>
     </div>
     
 
-    <label class="px-10 text-label" className="buttons">Select Tip %</label>
-    <div class="grid grid-cols-2 grid-rows-3 gap-5 justify-items-stretch mt-3 mx-10 mb-9">
+    <label class="px-10 text-label">Select Tip %</label>
+    <div class="grid grid-cols-2 grid-rows-3 gap-5 justify-items-stretch mt-3 mx-10 mb-9 tip-btn">
       <button class="text-2xl py-2 rounded-md bg-btn text-white hover:bg-tip hover:text-btn active:bg-tip active:bg-opacity-50">5%</button>
       <button class="text-2xl py-2 rounded-md bg-btn text-white hover:bg-tip hover:text-btn active:bg-tip active:bg-opacity-50">10%</button>
       <button class="text-2xl py-2 rounded-md bg-btn text-white hover:bg-tip hover:text-btn active:bg-tip active:bg-opacity-50">15%</button>
       <button class="text-2xl py-2 rounded-md bg-btn text-white hover:bg-tip hover:text-btn active:bg-tip active:bg-opacity-50">25%</button>
       <button class="text-2xl py-2 rounded-md bg-btn text-white hover:bg-tip hover:text-btn active:bg-tip active:bg-opacity-50">50%</button>
       <!-- placeholder-[extension color from tailwind config for placeholder color] -->
-      <input type="text" placeholder="Custom" class="text-right text-xl px-3 rounded-md text-btn bg-input placeholder-label outline-0 focus:border-2 focus:border-tip" className="tip-input" />
+      <input type="text" placeholder="Custom" class="text-right text-xl px-3 rounded-md text-btn bg-input placeholder-label outline-0 focus:border-2 focus:border-tip border-2 border-transparent custom" />
     </div>
 
     <div class="w-4/5 mx-auto">
       <label class="text-label">Number of People</label>
       <div class="mt-1 mb-5 relative">
         <img src="images/icon-person.svg" alt="icon-person" class="absolute top-3.5 left-3"/>
-        <input type="text" placeholder="0" className="bill-input" class="bg-input placeholder-label text-btn text-xl w-full text-right py-2 pl-8 pr-3 rounded-lg outline-0 focus:border-2 focus:border-tip" className="num-of-people" />
+        <input type="text" placeholder="0" class="bg-input border-2 border-transparent placeholder-label text-btn text-xl w-full text-right py-2 pl-8 pr-3 rounded-lg outline-0 focus:border-2 focus:border-tip people" />
       </div>
     </div>
 
@@ -83,8 +83,7 @@
             <label class="text-label text-xs">/ person</label>
           </div>
           <div class="grid justify-items-end mt-1 mb-5 relative">
-            <img src="images/icon-dollar.svg" alt="icon" class="absolute top-1 left-12">
-            <input type="text" value="0.00" class="w-20 text-right bg-btn text-tip text-3xl" className="tip-amount" />
+            <p class="text-tip text-3xl">$0.00</p>
           </div>
 
           <div class="flex flex-col">
@@ -92,21 +91,16 @@
             <label class="text-label text-xs">/ person</label>
           </div>
           <div class="mt-1 mb-5 relative flex flex-row justify-end">
-            <img src="images/icon-dollar.svg" alt="icon" class="absolute top-1 left-12">
-            <input type="text" value="0.00" class="w-20 text-right bg-btn text-tip text-3xl" />
+            <p class="text-tip text-3xl">$0.00</p>
           </div>
         </div>
       </div>
 
       <div class="mx-auto relative">
-        <button class="text-btn bg-tip mx-auto rounded-md py-2 my-5 text-2xl w-full hover:shadow-inner hover:shadow-[0_0_0_10em_rgba(255,255,255,0.3)] hover:shadow-white hover:shadow-2xl">RESET</button>
+        <button class="text-btn bg-tip mx-auto rounded-md py-2 my-5 text-2xl w-full hover:shadow-inner hover:shadow-[0_0_0_10em_rgba(255,255,255,0.3)] hover:shadow-white hover:shadow-2xl reset-btn">RESET</button>
       </div>
     </div>
-
-    <div class="attribution mt-5">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Vinix Collen</a>.
-    </div>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>

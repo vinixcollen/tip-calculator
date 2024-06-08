@@ -1,33 +1,30 @@
-const billInput = document.querySelector(".bill-input");
+const btnTip = document.querySelector('.tip-btn')
+const amount = document.querySelector('.amount')
+const people = document.querySelector('.people')
+const custom = document.querySelector('.custom')
 
-const btn = document.querySelector(".buttons")
-btn.addEventListener("click", function(event){
-    const btnText = event.target.innerText;
-    const tipAmount = document.querySelector(".tip-amount").innerText;
-    do{
-        if (btnText === 5){
-            tipAmount === billInput * 0.95;
-        } else if (btnText === 10){
-            tipAmount === billInput * 0.9;
-        } else if (btnText === 15){
-            tipAmount === billInput * 0.85;
-        } else if (btnText === 25){
-            tipAmount === billInput * 0.75;
-        } else if (btnText === 50){
-            tipAmount === billInput * 0.5;
-        } else{
-            const tipInput = document.querySelector(".tip-input");
-            tipAmount === billInput * (1 - (tipInput / 100));
-        }
-    } while (btn.isInteger(btnText) && btnText > 0);
-});
+let billAmount = 0
+let numberPeople = 0
+let customTip = 0
+
+btnTip.addEventListener("click", function (event) {
+    let str = event.target.innerHTML
+    let percent = parseInt(str.slice(0, str.length - 1)) // Get the number
 
 
-function countNumberOfPeople (num){
-    const num = document.querySelector(".num-of-people").innerText;
-    do{
-        if (num === 0){
-            num.querySelector()
-        }
-    } while (num.isInteger() && num >= 0);
-};
+})
+
+amount.addEventListener("input", function(event) {
+    billAmount = parseFloat(event.target.value)
+    console.log('Bill: ', billAmount)
+})
+
+people.addEventListener("input", function(event) {
+    numberPeople = parseFloat(event.target.value)
+    console.log('People: ', numberPeople)
+})
+
+custom.addEventListener("input", function (event) {
+    customTip = parseFloat(event.target.value)
+    console.log('Custom Tip: ', customTip)
+})
