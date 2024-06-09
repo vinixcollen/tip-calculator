@@ -48,7 +48,10 @@
   
   <div class="bg-white rounded-t-3xl pt-10 pb-5">
     <div class="w-4/5 mx-auto">
-      <label class="text-label">Bill</label>
+      <div class="flex justify-between">
+        <label class="text-label">Bill</label>
+        <p class="text-red-500 bill-message"></p>
+      </div>
       <div class="mt-1 mb-5 relative">
         <img src="./images/icon-dollar.svg" alt="icon" class="absolute top-3.5 left-3" />
         <input type="text" placeholder="0" class="bg-input border-2 border-transparent placeholder-label text-btn text-xl w-full text-right py-2 pl-8 pr-3 rounded-lg outline-0 focus:border-2 focus:border-tip amount" />
@@ -68,7 +71,10 @@
     </div>
 
     <div class="w-4/5 mx-auto">
-      <label class="text-label">Number of People</label>
+      <div class="flex justify-between">
+        <label class="text-label">Number of People</label>
+        <p class="text-red-500 people-message"></p>
+      </div>
       <div class="mt-1 mb-5 relative">
         <img src="images/icon-person.svg" alt="icon-person" class="absolute top-3.5 left-3"/>
         <input type="text" placeholder="0" class="bg-input border-2 border-transparent placeholder-label text-btn text-xl w-full text-right py-2 pl-8 pr-3 rounded-lg outline-0 focus:border-2 focus:border-tip people" />
@@ -83,7 +89,7 @@
             <label class="text-label text-xs">/ person</label>
           </div>
           <div class="grid justify-items-end mt-1 mb-5 relative">
-            <p class="text-tip text-3xl">$0.00</p>
+            <p class="text-tip text-3xl tip-per-person">$0.00</p>
           </div>
 
           <div class="flex flex-col">
@@ -91,7 +97,7 @@
             <label class="text-label text-xs">/ person</label>
           </div>
           <div class="mt-1 mb-5 relative flex flex-row justify-end">
-            <p class="text-tip text-3xl">$0.00</p>
+            <p class="text-tip text-3xl bill-per-person">$0.00</p>
           </div>
         </div>
       </div>
