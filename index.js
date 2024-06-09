@@ -66,7 +66,7 @@ btnTip.addEventListener("click", function (event) {
 
     let passed = validation(billAmount, numberPeople)
 
-    if (passed && !isNaN(customTip)) {
+    if (passed) {
         tipPerPerson = (parseFloat(billAmount) * parseInt(percent) * 0.01) / parseInt(numberPeople)
         totalPerPerson = (parseFloat(billAmount) + tipPerPerson) / parseInt(numberPeople)
 
